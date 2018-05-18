@@ -19,7 +19,7 @@ int main(int argc, char **argv)
     }
     f1.close();
 
-    int num[2000] = {0}; // just in case we encounter monkeys with damage 1 so we assume max size of array
+    int num[1000000] = {0}; // just in case we encounter monkeys with damage 1 so we assume max size of array
     i = 0;
     int j=0;
     for(long int l=0; l<1000000; l++)
@@ -32,10 +32,8 @@ int main(int argc, char **argv)
             num[j]++;
             i++;
         }
-        if (health > 0)
-            j++;
-        else 
-            break;
+        j++;
+        health = 2000;
     }
 
     int largest = num[0];

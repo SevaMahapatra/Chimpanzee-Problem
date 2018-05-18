@@ -32,7 +32,10 @@ int main(int argc, char **argv)
             num[j]++;
             i++;
         }
-        j++;
+        if (health > 0)
+            j++;
+        else 
+            break;
     }
 
     int largest = num[0];
